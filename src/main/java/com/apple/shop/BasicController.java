@@ -32,7 +32,6 @@ public class BasicController {
     @ResponseBody
     String date(){
         return LocalDateTime.now().toString();
-
     }
 
 }
