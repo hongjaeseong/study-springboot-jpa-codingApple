@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
+
+    <div th:replace="~{nav.html::navbar}"></div>
 
     <form action="/productCreate" method="POST">
         <h4>상품 생성하기</h4>

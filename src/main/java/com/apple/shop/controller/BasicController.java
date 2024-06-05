@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
+import static com.fasterxml.jackson.databind.type.LogicalType.DateTime;
 import static java.time.LocalTime.now;
 
 @Controller
@@ -31,7 +33,7 @@ public class BasicController {
     @GetMapping("/date")
     @ResponseBody
     String date(){
-        return LocalDateTime.now().toString();
+        return LocalDateTime.now().toLocalDate().toString();
     }
 
 }
